@@ -30,6 +30,8 @@
     --surface-shadow: rgba(120, 40, 65, 0.24);
     --ink-text: #3a1e28;
     --ink-soft: #6b4453;
+    --on-bg: #4a2a38;
+    --on-bg-soft: #86586a;
     --brass: #c98a9e;
     --brass-light: #ecb9c7;
     --brass-dark: #9c5a70;
@@ -51,6 +53,8 @@
       --surface-shadow: rgba(0, 0, 0, 0.55);
       --ink-text: #3a1e28;
       --ink-soft: #6b4453;
+      --on-bg: #f3e2e8;
+      --on-bg-soft: #cf9fae;
       --brass: #d98fa8;
       --brass-light: #f0b8c9;
       --brass-dark: #9c4f68;
@@ -67,6 +71,8 @@
     --surface-shadow: rgba(0, 0, 0, 0.55);
     --ink-text: #3a1e28;
     --ink-soft: #6b4453;
+    --on-bg: #f3e2e8;
+    --on-bg-soft: #cf9fae;
     --brass: #d98fa8;
     --brass-light: #f0b8c9;
     --brass-dark: #9c4f68;
@@ -82,6 +88,8 @@
     --surface-shadow: rgba(120, 40, 65, 0.24);
     --ink-text: #3a1e28;
     --ink-soft: #6b4453;
+    --on-bg: #4a2a38;
+    --on-bg-soft: #86586a;
     --brass: #c98a9e;
     --brass-light: #ecb9c7;
     --brass-dark: #9c5a70;
@@ -289,13 +297,8 @@
     font-size: 0.78rem;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: var(--ink-soft);
-    filter: brightness(0.9);
+    color: var(--on-bg);
   }
-  html:not([data-theme]) .unlock label,
-  :root[data-theme="light"] .unlock label { color: #5a4838; }
-  @media (prefers-color-scheme: dark) { .unlock label { color: #d9c9a8; } }
-  :root[data-theme="dark"] .unlock label { color: #d9c9a8; }
 
   .input-row {
     display: flex;
@@ -308,7 +311,7 @@
     font-family: var(--font-body);
     font-size: 1.05rem;
     font-style: italic;
-    color: var(--ink-text);
+    color: var(--on-bg);
     background: transparent;
     border: none;
     border-bottom: 1.5px solid var(--brass);
@@ -317,7 +320,7 @@
     text-align: center;
     outline: none;
   }
-  #nameInput::placeholder { color: var(--ink-soft); opacity: 0.55; font-style: italic; }
+  #nameInput::placeholder { color: var(--on-bg-soft); opacity: 0.9; font-style: italic; }
   #nameInput:focus-visible { border-bottom-color: var(--wax); }
   html { --focus-color: var(--brass); }
   *:focus-visible { outline: 2px solid var(--brass); outline-offset: 3px; }
